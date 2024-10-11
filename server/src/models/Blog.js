@@ -1,11 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const Blog = sequelize.define('Blog', {
-        title: DataTypes.STRING,
-        thumbnail: DataTypes.STRING,
-        picture: DataTypes.STRING,
-        content: DataTypes.TEXT,
-        category: DataTypes.STRING,     
-        status: DataTypes.STRING,
-    })
-    return Blog
+        Brand: DataTypes.STRING,         // ยี่ห้อของเรือ
+        thumbnail: DataTypes.STRING,     // รูปภาพ thumbnail ของเรือ
+        pictures: DataTypes.STRING,      // ภาพทั้งหมดของเรือ
+        content: DataTypes.TEXT,         // รายละเอียดของเรือ
+        cc: DataTypes.STRING,            // ขนาดความจุของเรือ 
+        modelName: DataTypes.STRING,      // ชื่อรุ่นของเรือ
+        price: DataTypes.STRING           // ไม่ระบุราคา
+    });
+
+    return Blog;
 }
